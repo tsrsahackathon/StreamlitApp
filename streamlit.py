@@ -1,5 +1,6 @@
 from pymongo import MongoClient
 import streamlit as st
+import json
 
 uri = "mongodb+srv://shriteqhackathon:5F5RZ96CiqZY4jzM@hackathon.vs7oa0j.mongodb.net/?retryWrites=true&w=majority"
 
@@ -115,6 +116,19 @@ def home():
     )
 
 
+def quizdisplay():
+    quiz_data = json.loads(quiz())
+
+    for i, question_data in enumerate(quiz_data["multiple_choice"]):
+        st.header(f"Question {i + 1}: {question_data['question']}")
+        for j, answer in enumerate(question_data['answers']):
+            clicked = st.button(f"Option {chr(65 + j)}: {answer['option']}")
+            if clicked and answer['correct']:
+                st.write("Correct!")
+            elif clicked and not answer['correct']:
+                st.write("Incorrect.")
+
+
 def lectures():
     st.title("Lectures")
 
@@ -133,7 +147,7 @@ def lectures():
         st.write(keywords())
     elif selected_tab == "Quiz":
         st.markdown("## Quiz")
-        st.write(quiz())
+        quizdisplay()
 
 
 # Sidebar navigation
