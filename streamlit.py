@@ -146,7 +146,6 @@ def lectures():
         st.markdown("## Keywords")
         st.write(keywords())
     elif selected_tab == "Quiz":
-        st.markdown("## Quiz")
         quizdisplay()
 
 
