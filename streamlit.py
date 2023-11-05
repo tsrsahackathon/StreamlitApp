@@ -100,6 +100,13 @@ def home():
     # Add a logo
     logo = st.image("your_logo.png", use_column_width=True)
 
+    st.markdown("## About us")
+    st.markdown("Welcome to Inscribd, where innovation meets education. At Inscribd, we're passionate about enhancing the learning experience by harnessing the power of cutting-edge technology. Our mission is to make every classroom more accessible and engaging through our unique lecture recording and transcription solutions.Inscribd is a learning platform made by students for students. Schools can install Inscribd devices in their classrooms to transcribe each lecture that is given there. Inscribd gives students a helpful summary of the lecture and quizzes students based on the lecture")
+    st.markdown("## What we do")
+    st.markdown("Inscribd is revolutionizing the way students and educators access and interact with classroom content. Our device seamlessly records lectures and transcribes them using advanced AI algorithms. But we don't stop there – we go a step further. Inscribd's AI engine condenses these transcriptions into summaries, extracts key concepts and keywords, and even generates multiple-choice quizzes (MCQs) for a comprehensive learning experience.")
+    st.markdown(
+        "# Explore the possibilities with Inscribd and embrace a new era of learning today.")
+
     # Style the home page
     st.markdown(
         """
@@ -110,6 +117,21 @@ def home():
                 text-align: center;
                 margin: 20px 0;
             }
+            /* Add a custom CSS class for green buttons */
+    .sidebar-button {
+        background-color: #00FF00; /* Green color */
+        color: #FFFFFF; /* Text color */
+        border-radius: 5px; /* Rounded corners */
+        padding: 10px 20px; /* Add padding for a button-like appearance */
+    }
+    /* Apply the custom CSS class to all sidebar elements */
+    .sidebar-content div[data-baseweb="button"] {
+        margin: 5px 0;
+    }
+    .sidebar-content div[data-baseweb="button"] .stButton {
+        display: block;
+        width: 100%;
+    }
         </style>
         """,
         unsafe_allow_html=True,
