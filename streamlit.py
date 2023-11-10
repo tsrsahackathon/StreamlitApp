@@ -170,11 +170,15 @@ def lectures():
     elif selected_tab == "Quiz":
         quizdisplay()
 
+def amartya():
+    st.title("amartya zone")
+    logo = st.image("amartya.png", use_column_width=True)
 
 # Sidebar navigation
 pages = {
     "Home": home,
     "Lectures": lectures,
+    "Amartya:": amartya,
 }
 
 st.sidebar.title("Navigation")
