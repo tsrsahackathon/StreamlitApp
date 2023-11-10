@@ -178,7 +178,7 @@ def amartya():
 pages = {
     "Home": home,
     "Lectures": lectures,
-    "Amartya:": amartya,
+    "amartya": amartya,
 }
 
 st.sidebar.title("Navigation")
